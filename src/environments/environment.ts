@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyAgarr3GxuLl0gasobUwr3rZ0IwN6GIirw',
+    authDomain: 'charity-finder-6c523.firebaseapp.com',
+    databaseURL: 'https://charity-finder-6c523.firebaseio.com',
+    projectId: 'charity-finder-6c523',
+    storageBucket: 'charity-finder-6c523.appspot.com',
+    messagingSenderId: '308815212',
+    appId: '1:308815212:web:c02a545e8ea59772d8bf49',
+    measurementId: 'G-3GL2VEX22L'
+  }
 };
 
 /*

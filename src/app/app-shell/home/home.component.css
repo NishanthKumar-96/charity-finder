@@ -1,0 +1,92 @@
+.conatainer{
+    width: 100%;
+    height: 100%;
+    background-color: #8d93ab;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    margin-left: 24px;
+    font-weight: 900;
+    width: 50%;
+    font-size: 30px;
+    color: #21bf73;
+    /* border: 1px solid black; */
+    /* color: silver; */
+}
+.icon{
+    font-size: 34px;
+    position: relative;
+    top:4px;
+    right: 6px;
+}
+.header-block{
+    width: 98%;
+    height: 90px;
+    margin: 0 10px 10px 10px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color:#fff ;
+}
+.col{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    /* background-color: turquoise; */
+    align-items: center;
+}
+.logo .icon{
+    position: relative;
+    top:8px;
+    right:8px;
+}
+.col ul li{
+    list-style-type: none;
+    display: inline;
+    margin-left: 20px;
+}
+.col ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 200;
+    font-size: 16px;
+}
+.col ul li a:hover{
+    padding: 8px 20px;
+    border-radius: 4px;
+    background-color: rgb(211, 214, 214);
+    transition: 0.5s;
+}
+
+.example-form {
+    min-width: 100px;
+    max-width: 250px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .btn{
+      margin-left: 2%;
+      cursor: pointer;
+  }
+  .icon-btn{
+      background-color: transparent;
+      border: transparent;
+  }
+
+.main-block{
+    width: 98%;
+    height: 86%;
+    border-radius: 20px;
+    background-color:#fff ;
+    overflow: hidden;
+    overflow: scroll;
+}
+
+

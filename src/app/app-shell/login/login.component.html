@@ -1,0 +1,86 @@
+<ng-container *ngIf="account">
+<mat-card class="card">
+    <h2>Login</h2>
+    <form [formGroup] ="loginForm">
+        <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email" formControlName="email">
+            <div class="err-msg" 
+                *ngIf="!loginForm.controls.email.valid && loginForm.controls.email.touched">
+                <mat-error *ngIf="loginForm.controls['email'].errors.required">
+                    Email is <strong>required</strong>
+                  </mat-error>
+            </div>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width ">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Password" formControlName="password">
+            <div class="err-msg" 
+                *ngIf="!loginForm.controls.password.valid && loginForm.controls.password.touched">
+                <mat-error *ngIf="loginForm.controls['password'].errors.required">
+                    Password is <strong>required</strong>
+                </mat-error>
+             </div>
+        </mat-form-field>
+        <br>
+        <button (click)="login()"  mat-flat-button color="primary" type="submit">Login</button>
+        <button class="btn" (click)="createNew()">Create New Account?</button>
+        <!-- <mat-error *ngIf="errorMsg">{{ errorMsg }}</mat-error> -->
+        </form>
+</mat-card>
+</ng-container>
+<ng-container *ngIf="!account">
+<mat-card class="card">
+    <h2>Sign-Up</h2>
+    <form [formGroup]="signUpForm">
+        <mat-form-field class="example-full-width">
+            <mat-label>Name</mat-label>
+            <input type="text" matInput placeholder="Name" formControlName="name">
+            <div class="err-msg" 
+                *ngIf="!signUpForm.controls.name.valid && signUpForm.controls.name.touched">
+                <mat-error *ngIf="signUpForm.controls['name'].errors.required">
+                    Name is <strong>required</strong>
+                </mat-error>
+            </div>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input type="text" matInput placeholder="Email" formControlName="email">
+            <div class="err-msg" 
+                *ngIf="!signUpForm.controls.email.valid && signUpForm.controls.email.touched">
+                <mat-error *ngIf="signUpForm.controls['email'].errors.required">
+                    Email is <strong>required</strong>
+                  </mat-error>
+            </div>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width ">
+            <mat-label>Password</mat-label>
+            <input type="text" matInput placeholder="Password" formControlName="password">
+            <div class="err-msg" 
+                *ngIf="!signUpForm.controls.password.valid && signUpForm.controls.password.touched">
+                <mat-error *ngIf="signUpForm.controls['password'].errors.required">
+                    Password is <strong>required</strong>
+                </mat-error>
+            </div>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width ">
+            <mat-label>Confirm - Password</mat-label>
+            <input type="text" matInput placeholder="Confirm - Password" formControlName="confirm">
+            <div class="err-msg" 
+                *ngIf="!signUpForm.controls.confirm.valid && signUpForm.controls.confirm.touched">
+                <mat-error *ngIf="signUpForm.controls['confirm'].errors.required">
+                    Confirm - Password is <strong>required</strong>
+                </mat-error>
+            </div>
+        </mat-form-field>
+        <br>
+        <button (click)="signUp()" mat-flat-button color="primary" type="submit">Login</button>
+        <button class="btn" (click)="createNew()">Already Have account?</button>
+        <mat-error *ngIf="errorMsg">{{ errorMsg }}</mat-error>
+        </form>
+</mat-card>
+</ng-container>

@@ -1,0 +1,70 @@
+
+<div class="container">
+    <div class="left-row">
+        <div class="form-block">
+          <ng-container *ngIf="!user">
+            <h1 class="title-msg">Please Login To get Form</h1>
+          </ng-container>
+          <ng-container *ngIf="user">
+            <h1 class="title">Application - Form</h1>
+            <form [formGroup]="applyForm" class="example-form">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Project - Name</mat-label>
+                  <input matInput placeholder="Name of the Project" formControlName="projectName">
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width ">
+                    <mat-label>Creator - Name</mat-label>
+                    <input matInput placeholder="Name of the Creator" formControlName="creator">
+                  </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                    <mat-label>Description</mat-label>
+                    <textarea matInput placeholder="About Project" formControlName=description></textarea>
+                  </mat-form-field>
+
+                  <mat-form-field class="example-full-width ">
+                    <mat-label>Goal Amount</mat-label>
+                    <input matInput placeholder="How much You want" formControlName="goalAmout">
+                  </mat-form-field>
+
+                  <mat-form-field class="example-full-width ">
+                    <mat-label>Collected Amount</mat-label>
+                    <input matInput placeholder="How Much You Collected" formControlName="collected">
+                  </mat-form-field>
+
+                  <mat-form-field class="example-full-width ">
+                    <mat-label>Country</mat-label>
+                    <input matInput placeholder="Country" formControlName="country">
+                  </mat-form-field>
+
+                  <mat-form-field class="example-full-width ">
+                    <mat-label>Phone Number</mat-label>
+                    <input matInput placeholder="Phone" formControlName="phone">
+                  </mat-form-field>
+
+                  <mat-form-field class="example-full-width ">
+                    <mat-label>Image Url</mat-label>
+                    <input matInput placeholder="Image Url" formControlName="imageUrl">
+                  </mat-form-field>
+                  <!-- <input type="file" name="file" id="file" class="inputfile" />
+                  <label for="file">Project Image</label> -->
+                  <div class="btn-block">
+                      <button type="submit" (click)="applyValue()">Apply</button>
+                  </div>
+               </form>
+              </ng-container>
+        </div>
+    </div>
+
+    <div class="right-row">
+        <mat-card class="card">
+              <ng-container *ngIf="!user">
+                  <app-login></app-login>
+              </ng-container>
+              <ng-container *ngIf="user">
+                <app-donors></app-donors>
+            </ng-container>
+        </mat-card>
+    </div>
+</div>

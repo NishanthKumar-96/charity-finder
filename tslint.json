@@ -71,7 +71,10 @@
       true,
       "single"
     ],
+    "indent":false,
     "trailing-comma": false,
+    "whitespace":false,
+    "no-trailing-whitespace":false,
     "no-conflicting-lifecycle": true,
     "no-host-metadata-property": true,
     "no-input-rename": true,

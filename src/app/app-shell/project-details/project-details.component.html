@@ -1,0 +1,17 @@
+
+<div class="container">
+    <div class="left-row">
+       {{ project | async }}
+    </div>
+
+    <div class="right-row">
+        <mat-card class="card">
+              <ng-container *ngIf="!user">
+                  <app-login></app-login>
+              </ng-container>
+              <ng-container *ngIf="user">
+                <app-donors></app-donors>
+            </ng-container>
+        </mat-card>
+    </div>
+</div>

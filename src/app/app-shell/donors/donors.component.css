@@ -1,0 +1,50 @@
+.container{
+    width: 100%;
+    height: 100%;
+    /* background-color: violet; */
+    overflow: hidden;
+    overflow: scroll;
+}
+.card{
+    height:40%;
+    overflow: hidden;
+    overflow: scroll;
+    
+}
+.title{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ea5455;
+}
+.project-list{
+    width: 100%;
+    height: 70px;
+    border: 1px solid #91d18b;
+    border-radius: 6px;
+    display: flex;
+    margin-bottom: 10px;
+}
+.amount{
+    width: 30%;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #d54062;
+}
+.amount p{
+    position: relative;
+    top: 4px;
+}
+.project-name{
+    width: 70%;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 30px;
+    font-weight: 700;
+}
